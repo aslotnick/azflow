@@ -1,0 +1,3 @@
+type=command
+dependencies=task_1.job
+command="echo "task 2b""
