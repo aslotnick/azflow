@@ -1,0 +1,2 @@
+class AzflowException(Exception):
+    """ """
