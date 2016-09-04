@@ -9,5 +9,5 @@ class BashOperator(Task):
 
     def render(self):
         rendered = Task.render(self)
-        rendered += 'command="' + self.bash_command + '"'
+        rendered += 'command=' + self.bash_command + '\n'
         return rendered

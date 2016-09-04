@@ -1,3 +1,2 @@
 type=command
-dependencies=this_dag.job
-command="echo "task 1""
+command=echo "task 1"

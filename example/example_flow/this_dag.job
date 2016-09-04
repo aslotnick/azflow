@@ -1,1 +1,2 @@
 type=noop
+upstream=task_3.job
