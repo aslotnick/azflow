@@ -3,7 +3,8 @@ Azflow translates the DAG-based programming model of [Airflow](https://github.co
 
 ## Usage ##
 To produce the output found in the directory "example/example_flow", run:
-`python azflow.py --dag_file example/example_dag.py --output_folder example/example_flow/ --print`.
+
+`python -m azflow.render --dag_file example/example_dag.py --output_folder example/example_flow/ --print`.
 
 ## Features ##
 * Tasks get translated to Azkaban jobs with the task_id becoming the file name prefix. Only "command" jobs are currently supported via the BashOperator.
@@ -13,6 +14,12 @@ To produce the output found in the directory "example/example_flow", run:
 
 ## Testing ##
 `python -m unittest test.AzflowTest`
+
+## Python Compatibility ##
+Azflow has been tested using Python 3. 
+
+## Installation ##
+`pip install git+https://github.com/aslotnick/azflow.git`
 
 ## See Also ##
 * [AzkabanCLI](https://github.com/mtth/azkaban)
