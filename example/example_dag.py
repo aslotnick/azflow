@@ -18,6 +18,3 @@ task_3 = BashOperator(task_id='task_3', dag=this_dag,
                       bash_command='echo "task 3"')
 task_3.set_upstream(task_2a)
 task_3.set_upstream(task_2b)
-
-this_dag.print_tasks()
-this_dag.render_tasks('example/example_flow')
