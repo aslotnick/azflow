@@ -47,8 +47,8 @@ class Task():
     def render(self):
         rendered = 'type={}\n'.format(self.job_type)
         if self.upstream:
-            rendered += 'upstream=' + ','.join(
-                        [t.task_id + '.job' for t in self.upstream]) + '\n'
+            rendered += 'dependencies=' + ','.join(
+                        [t.task_id for t in self.upstream]) + '\n'
         return rendered
 
 

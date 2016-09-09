@@ -1,2 +1,2 @@
 type=noop
-upstream=task_3.job
+dependencies=task_3

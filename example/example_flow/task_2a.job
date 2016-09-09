@@ -1,3 +1,3 @@
 type=command
-upstream=task_1.job
+dependencies=task_1
 command=echo "task 2a"
