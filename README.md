@@ -1,5 +1,5 @@
 # Azflow #
-Azflow translates the DAG-based programming model of [Airflow](https://github.com/apache/incubator-airflow) into [Azkaban](https://azkaban.github.io/).
+Azflow translates the DAG-based programming model of [Airflow](https://github.com/apache/incubator-airflow) into [Azkaban](https://azkaban.github.io/) (*Disclaimer: Azflow is inspired by but not connected to these projects*).
 
 ## Features ##
 * Tasks get translated to Azkaban jobs with the task_id becoming the file name prefix. Only "command" jobs are currently supported via the BashOperator.
@@ -15,6 +15,12 @@ To produce the output found in the directory "example/example_flow", run:
 Once example_flow is zipped and uploaded to Azkaban, it produces the following flow:
 
 ![graph screenshot](example/graph.png)
+
+Since a flow (DAG) is expressed in Python, you can create more complex workfows by looping:
+
+`python -m azflow.render --dag_file example/example_dag_loop.py --output_folder example/example_flow_loop/ --print`
+
+![loop graph screeenshot](example/loop_graph.png)
 
 ## Testing ##
 `python -m unittest test.AzflowTest`

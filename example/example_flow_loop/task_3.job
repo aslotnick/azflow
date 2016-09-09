@@ -1,0 +1,3 @@
+type=command
+dependencies=in_part_2,no_part_2,do_part_2,particular_part_2,all_part_2,order_part_2,these_part_2
+command=echo "clean up"

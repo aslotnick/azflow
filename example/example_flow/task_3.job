@@ -1,3 +1,3 @@
 type=command
-dependencies=task_2b,task_2a
+dependencies=task_2a,task_2b
 command=echo "task 3"

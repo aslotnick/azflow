@@ -1,0 +1,3 @@
+type=command
+dependencies=no_part_1
+command=echo "finish no"
