@@ -6,11 +6,10 @@ loop_dag = DAG(dag_id='loop_dag')
 task_1 = BashOperator(task_id='task_1', dag=loop_dag, 
                       bash_command='echo "begin"')
 
-tasks_to_loop = ['do', 'all', 'these', 'in', 'no','particular', 'order']
-
 task_3 = BashOperator(task_id='task_3', dag=loop_dag, 
                       bash_command='echo "clean up"')
 
+tasks_to_loop = ['do', 'all', 'these', 'in', 'no','particular', 'order']
 for t in tasks_to_loop:
     task_2a = BashOperator(task_id=t+'_part_1', dag=loop_dag, 
                        bash_command='echo "start {}"'.format(t))
